@@ -9,9 +9,21 @@ export default class CepController{
     static async findAddress(req, res){
         const cep = req.body.cep
 
+        if(cep.length > 8){
+            console.log('Erro: CEP não deve conter mais que 8 números!')
+
+            res.status(404).redirect('/')
+        }
+
         const reqCep = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
         
-        const data = await reqCep.json()
+        if(reqCep.size === 0){
+            console.log('Erro: CEP não encontrado!');
+
+            res.status(404).redirect('/')
+        }
+
+        const data = await reqCep.json()        
 
         const info = { 
             localidade: data.localidade,
@@ -22,8 +34,6 @@ export default class CepController{
             ddd: data.ddd,
             cep: data.cep
         }
-
-        console.log(info)
 
         res.render('cep/showAddress', {info} )
     }
