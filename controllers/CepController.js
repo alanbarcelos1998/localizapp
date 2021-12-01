@@ -16,12 +16,6 @@ export default class CepController{
         }
 
         const reqCep = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        
-        if(reqCep.size === 0){
-            console.log('Erro: CEP não encontrado!');
-
-            res.status(404).redirect('/')
-        }
 
         const data = await reqCep.json()        
 
@@ -35,6 +29,8 @@ export default class CepController{
             cep: data.cep
         }
 
-        res.render('cep/showAddress', {info} )
+        let vazio = info.localidade == undefined ? true : false
+
+        res.render('cep/showAddress', {info: info, vazio} )
     }
 }
