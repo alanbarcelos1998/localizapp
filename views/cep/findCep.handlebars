@@ -1,0 +1,17 @@
+<h1>Encontrar CEP</h1>
+
+<form action="/findCep" method="POST">
+    <div class="form-control">
+        <label for="uf">UF:</label>
+        <input type="text" name="uf" placeholder="Digite a UF" maxlength="2">
+    </div>
+    <div class="form-control">
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" placeholder="Digite a cidade" minlength="3">
+    </div>
+    <div class="form-control">
+        <label for="rua">Rua:</label>
+        <input type="text" name="rua" placeholder="Digite a Rua" minlength="3">
+    </div>
+    <input type="submit" value="Buscar">
+</form>

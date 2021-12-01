@@ -33,4 +33,12 @@ export default class CepController{
 
         res.render('cep/showAddress', {info: info, vazio} )
     }
+
+    static async findCep(req, res){
+        res.render('cep/findCep')
+    }
+
+    static async findCepPost(req, res){
+        
+    }
 }
