@@ -1,2 +1,8 @@
 <h1>CEP</h1>
-<p> {{}} </p>
+{{#each data}}
+    <div class="res-cep">
+        <p> {{this.cep}} </p>
+        <p> {{this.logradouro}} </p>
+        <p> {{this.bairro}} </p>
+    </div>
+{{/each}}

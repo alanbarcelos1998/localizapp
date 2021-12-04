@@ -29,33 +29,18 @@ export default class CepController{
     }
 
     static async findCepPost(req, res){
-        const reqPost = {
-            uf: req.body.uf,
-            cidade: req.body.cidade,
-            bairro: req.body.bairro,
-            rua: req.body.rua
-        }
+            const reqPost = {
+                uf: req.body.uf,
+                cidade: req.body.cidade,
+                rua: req.body.rua
+            }
+    
+            const reqResult = await fetch(`https://viacep.com.br/ws/${reqPost.uf}/${reqPost.cidade}/${reqPost.rua}/json/`)
+    
+            const data = await reqResult.json()
+    
+            console.log(data);
 
-        const reqResult = await fetch(`https://viacep.com.br/ws/${reqPost.uf}/${reqPost.cidade}/${reqPost.rua}/json/`)
-
-        const data = await reqResult.json()
-
-
-        // console.log(data.map((res) => res.bairro))
-
-        // if (data.bairro == reqPost.bairro){
-        //     console.log(data)
-        // } else {
-        //     console.log('CEP não encontrado!')
-        // }
-
-
-        
-
-        // const info = { cep: data.cep}
-
-        //let vazio = info.reqResult == undefined ? true : false
-
-        // res.render('cep/showCep', {})
+            res.render('cep/showCep', {data})
     }
 }
