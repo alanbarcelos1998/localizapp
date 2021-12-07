@@ -1,5 +1,5 @@
 # Objetivo
-    <p>Esta aplicação tem como finalidade apresentar resultados referentes a pesquisa de endereço pelo CEP ou procura pelo CEP de determinada localidade.</p> 
+    <p> Esta aplicação tem como finalidade apresentar resultados referentes a pesquisa de endereço pelo CEP ou procura pelo CEP de determinada localidade. </p> 
 
 ## Tecnologias
     express
