@@ -1,17 +1,18 @@
-<h1>Endereço</h1>
-    {{#if vazio}}
-        <h3>Não encontrado</h3>
-        <a href="/">Voltar</a>  
-    {{else}}
-        <p> 
-            {{data.bairro}}
-            {{data.localidade}}
-            {{data.uf}}
-            {{data.logradouro}}
-            {{data.ddd}}
-        </p>
-    {{/if}}
-    
-      
-    
-    
+<link rel="stylesheet" href="/css/style.css">
+
+<div id="address">
+    <h1>Endereço do CEP {{data.cep}}</h1>
+    <div class="results">
+        {{#if vazio}}
+            <h3>Não encontrado</h3>
+        {{else}}
+            <div class="datas"> 
+                <p>UF: <a>{{data.uf}}</a></p>
+                <p>Localidade: <a>{{data.localidade}}</a></p>
+                <p>Bairro: <a>{{data.bairro}}</a></p>
+                <p>Logradouro: <a>{{data.logradouro}}</a></p>
+                <p>DDD: <a>{{data.ddd}}</a></p>
+            </div>
+        {{/if}}
+    </div>
+</div> 

@@ -12,6 +12,8 @@ app.use(urlencoded({extended: true}))
 
 app.use(json())
 
+app.use(express.static('public'))
+
 // Routes
 app.use('/', cepRoute)
 

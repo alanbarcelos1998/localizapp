@@ -38,9 +38,9 @@ export default class CepController{
             const reqResult = await fetch(`https://viacep.com.br/ws/${reqPost.uf}/${reqPost.cidade}/${reqPost.rua}/json/`)
     
             const data = await reqResult.json()
-    
-            console.log(data);
 
-            res.render('cep/showCep', {data})
+            let vazio = data.length === 0  ? true : false
+
+            res.render('cep/showCep', {data: data, vazio})
     }
 }

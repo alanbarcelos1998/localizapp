@@ -1,0 +1,110 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica;
+}
+
+#navbar {
+    display: flex;
+    margin: 10px;   
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li{
+    margin-left: 1.5em;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+#navbar ul li a:hover{
+    color: rgb(111, 187, 111);
+}
+
+h1{
+    text-align: center;
+    color: rgb(117, 32, 117);
+}
+
+#form-total{
+    padding: 3px;
+    margin: 50px 450px 100px 450px;
+    border: 2px solid rgb(192, 39, 192);
+    border-radius: 10px;
+    background-color: #000;
+}
+
+form{
+    text-align: center;
+    margin: 150px;
+}
+
+.form-control input,
+.form-control textarea{    
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    max-width: 100px;
+    border: 1px solid #000; 
+    text-align: center;
+}
+
+form input[type='submit'],
+.btn{
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.5em 1.2em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5s;
+}
+
+form input[type='submit']:hover,
+.btn:hover{
+    background-color: rgb(77, 94, 94);
+    color: #000;
+}
+
+/*  Address */
+#address h1{
+    text-align: center;
+    color: rgb(117, 32, 117);
+}
+
+.results {
+    text-align: center;
+    margin: 50px 350px 100px 350px;
+    padding: 30px;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid rgb(192, 39, 192);
+    border-radius: 10px;
+    font-family: Helvetica;
+    font-size: 20pt;
+}
+
+.datas p{
+    padding: 2px;
+    margin-bottom: 3px;
+    color: rgb(127, 218, 127);
+}
+
+.datas a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

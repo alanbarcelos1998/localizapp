@@ -1,8 +1,15 @@
-<h1>CEP</h1>
-{{#each data}}
-    <div class="res-cep">
-        <p> {{this.cep}} </p>
-        <p> {{this.logradouro}} </p>
-        <p> {{this.bairro}} </p>
+<div id="cep">
+    <h1>CEP</h1>
+    <div class="results">
+        {{#if vazio}}
+            <h3>CEP não encontrado</h3>
+        {{else}}
+            {{#each data}}
+            <div class="datas">
+                <p> CEP: <a>{{this.cep}}</a>, Bairro: <a>{{this.bairro}}</a> </p>
+                <hr>            
+            </div>
+            {{/each}}
+        {{/if}}
     </div>
-{{/each}}
+</div>
